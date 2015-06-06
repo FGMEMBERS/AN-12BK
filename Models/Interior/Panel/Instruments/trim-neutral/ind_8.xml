@@ -7,15 +7,18 @@
     #############################################################################	  
     -->
 <!--
-
-    ###################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-March2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
+    #########################################################################################
+    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
+    Animations, FDM, Instrumentation, Rembrandt, ALS, Paratroopers, Cargo, Sounds
+    all with full Multiplayer Support.
+    Development is ongoing, see latest version: https://github.com/HerbyW?tab=repositories
     This file is licenced under the terms of the GNU General Public Licence V3 or later
-    
-    Firefly: 3D model improvment: ruder, speedbreak, ailerions, all gears and doors
+    D-Leon: technical assistance
+    Firefly: 3D model improvment
     Eagel: Liveries
-    ###################################################################################
+    Michat, Joe, Miguel, 3m, D-07007 and many others: testing and giving hints for impovements
+    Instruments from; Tu-154b, Il-76D, 707
+    ##########################################################################################
 -->
 <!-- indicators on central panel
 3D instrument for Tu-154 -->
@@ -56,6 +59,10 @@
 <animation>
   <type>material</type>
   <object-name>text_1</object-name>
+   <condition>    
+      <property>controls/switches/metar</property>
+      <value>1</value>     
+   </condition>
   <emission>
     <red>1.0</red>
     <green>1.0</green>
@@ -205,14 +212,35 @@
   <action>
     <button>0</button>
     <repeatable>false</repeatable>
-    
-    <binding>
-      
+    <binding>      
+      <command>nasal</command>
+      <script>setprop("sim/messages/copilot","Latest Metar-Data:");</script>
+    </binding>
+    <binding>      
       <command>nasal</command>
       <script>setprop("sim/messages/copilot",getprop("/environment/metar/data"));</script>
     </binding>
-    
-    
+    <binding>      
+      <command>nasal</command>
+      <script>setprop("sim/messages/copilot","Minimal ground visibility in meter:");</script>
+    </binding>
+    <binding>      
+      <command>nasal</command>
+      <script>setprop("sim/messages/copilot",getprop("/environment/metar/min-visibility-m"));</script>
+    </binding>
+    <binding>      
+      <command>nasal</command>
+      <script>setprop("sim/messages/copilot","Closest Airport:");</script>
+    </binding>
+    <binding>      
+      <command>nasal</command>
+      <script>setprop("sim/messages/copilot",getprop("/sim/airport/closest-airport-id"));</script>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/switches/metar</property>
+      <value>0</value>
+    </binding>  
     
     </action>
   </animation>
