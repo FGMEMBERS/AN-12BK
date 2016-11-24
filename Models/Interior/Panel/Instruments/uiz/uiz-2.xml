@@ -8,20 +8,7 @@
     # Updated by Helijah August 2012                                            #
     #############################################################################
 -->
-<!--
-    #########################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Animations, FDM, Instrumentation, Rembrandt, ALS, Paratroopers, Cargo, Sounds
-    all with full Multiplayer Support.
-    Development is ongoing, see latest version: https://github.com/HerbyW?tab=repositories
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    D-Leon: technical assistance
-    Firefly: 3D model improvment
-    Eagel: Liveries
-    Michat, Joe, Miguel, 3m, D-07007 and many others: testing and giving hints for impovements
-    Instruments from; Tu-154b, Il-76D, 707
-    ##########################################################################################
--->
+
 <!-- Turbine gauge UIZ-3 3D instrument for Tu-134 -->
 <PropertyList>
 
@@ -81,7 +68,7 @@
   <animation>
     <type>rotate</type>
     <object-name>needle_1</object-name>
-    <property>/engines/engine[1]/n2</property>
+    <property>engines/engine[1]/n2</property>
     <factor> 0.0703 </factor>
     <interpolation>
       <entry><ind>   0 </ind><dep>  0 </dep></entry>
@@ -105,7 +92,7 @@
   <animation>
     <type>rotate</type>
     <object-name>needle_2</object-name>
-    <property>/engines/engine[1]/n2</property>
+    <property>engines/engine[1]/n2</property>
     <interpolation>
       <entry><ind>   0 </ind><dep> 0 </dep></entry>
       <entry><ind>  60 </ind><dep> 40 </dep></entry>
@@ -128,7 +115,7 @@
   <animation>
     <type>rotate</type>
     <object-name>needle_3</object-name>
-    <property>/engines/engine[1]/n2</property>    
+    <property>engines/engine[1]/n2</property>    
     <interpolation>
       <entry><ind>   0 </ind><dep> 0 </dep></entry>
       <entry><ind>  60 </ind><dep> 40 </dep></entry>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
+<!--
+Copyright (C) Herbert Wagner Dec2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
+-->
+
 <!-- Antonov An 12        :  BARANGER Emmanuel (2013)
 
      Sources              : http://en.wikipedia.org/wiki/Antonov_An-12
@@ -12,19 +17,6 @@
      Max speed            : 777 km/h   (   419 kt      )
      Cruise speed         : 670 km/h   (   361 kt      )
 
-    #########################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-Mai2016
-    Animations, FDM, Instrumentation, Rembrandt, ALS, Paratroopers, Cargo, Sounds
-    all with full Multiplayer Support.
-    Development is ongoing, see latest version: https://github.com/HerbyW?tab=repositories
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    D-Leon: technical assistance
-    Firefly: 3D model improvment
-    Eagel: Liveries
-    Michat, Joe, Miguel, 3m, D-07007 and many others: testing and giving hints for impovements
-    Instruments from; Tu-154b, Il-76D, 707 and own developments
-    ##########################################################################################
-     
     https://en.wikipedia.org/wiki/Antonov_An-12
      
     An-12B – Bezeichnung für die zivile Versionen, die mit 200 Stück ab 1966 an die Aeroflot ausgeliefert wurde.
@@ -49,6 +41,15 @@
     characterized the An-12BK, which was built exclusively for the VTA.
     
     
+            
+            YASim solution results:
+       Iterations: 1151
+ Drag Coefficient: 10.7203
+       Lift Ratio: 331.484
+       Cruise AoA: 0.672848
+   Tail Incidence: -0.500049
+Approach Elevator: -0.45499
+            CG: 2.717, -0.000, -1.480
 -->
 
 <airplane mass="62000" version="YASIM_VERSION_CURRENT">
@@ -115,9 +116,9 @@
         length="13.392"
         taper="0.54"
         sweep="4.2"
-        camber="0.1">
+        camber="0.03">
         <stall aoa="18" width="8" peak="1.5"/>
-        <flap0 start="0.15" end="1" lift="1.3" drag="1.7"/>
+        <flap0 start="0.15" end="1" lift="1.3" drag="1.8"/>
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
         <control-speed control="FLAP0" transition-time="10"/>
@@ -149,11 +150,11 @@
          sweep="3.5"
          taper="0.45">
          <stall aoa="18" width="8" peak="1.5"/>
-         <flap0 start="0" end="1" lift="2.3" drag="1.2"/>
+         <flap0 start="0" end="1" lift="1.7" drag="1.2"/>
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
-         <control-speed control="FLAP0" transition-time="6.0"/>
+         <control-speed control="FLAP0" transition-time="5.0"/>
   </hstab>
 
   <!-- Ruder -->
@@ -199,7 +200,7 @@
                              n2-low-idle="32"
                              n2-high-idle="65"
                              n2-max="100"
-                             bsfc="0.65"> 
+                             bsfc="0.41"> 
                              <control-input axis="/controls/engines/engine[0]/condition" control="CONDLEVER"/>
                              <control-input axis="/controls/engines/engine[0]/throttle-v" control="THROTTLE"/>
              </turbine-engine>
@@ -227,7 +228,7 @@
                              n2-low-idle="32"
                              n2-high-idle="65"
                              n2-max="100"
-                             bsfc="0.65"> 
+                             bsfc="0.41"> 
                              <control-input axis="/controls/engines/engine[1]/condition" control="CONDLEVER"/>
                              <control-input axis="/controls/engines/engine[1]/throttle-v" control="THROTTLE"/>
              </turbine-engine>
@@ -255,7 +256,7 @@
                              n2-low-idle="32"
                              n2-high-idle="65"
                              n2-max="100"
-                             bsfc="0.65"> 
+                             bsfc="0.41"> 
                              <control-input axis="/controls/engines/engine[2]/condition" control="CONDLEVER"/>
                              <control-input axis="/controls/engines/engine[2]/throttle-v" control="THROTTLE"/>
              </turbine-engine>
@@ -283,7 +284,7 @@
                              n2-low-idle="32"
                              n2-high-idle="65"
                              n2-max="100"
-                             bsfc="0.65"> 
+                             bsfc="0.41"> 
                              <control-input axis="/controls/engines/engine[3]/condition" control="CONDLEVER"/>
                              <control-input axis="/controls/engines/engine[3]/throttle-v" control="THROTTLE"/>
              </turbine-engine>

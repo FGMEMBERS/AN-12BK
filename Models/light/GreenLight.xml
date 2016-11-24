@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    #########################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Animations, FDM, Instrumentation, Rembrandt, ALS, Paratroopers, Cargo, Sounds
-    all with full Multiplayer Support.
-    Development is ongoing, see latest version: https://github.com/HerbyW?tab=repositories
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    D-Leon: technical assistance
-    Firefly: 3D model improvment
-    Eagel: Liveries
-    Michat, Joe, Miguel, 3m, D-07007 and many others: testing and giving hints for impovements
-    Instruments from; Tu-154b, Il-76D, 707
-    ##########################################################################################
+Copyright (C) Herbert Wagner Dec2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 
 <PropertyList>
@@ -28,7 +18,7 @@
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Light</object-name>
     <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/sim/rendering/rembrandt/enabled</property>
     </condition>
   </effect>
 
@@ -43,6 +33,15 @@
     <spherical type="bool">true</spherical>
   </animation>
 
+      <animation>
+    <type>select</type>
+    <object-name>Light</object-name>
+    <condition>
+      <property>sim/multiplay/generic/int[8]</property>
+    </condition>
+  </animation>
+
+  
   <animation>
     <type>material</type>
     <object-name>Light</object-name>
@@ -50,7 +49,7 @@
       <red>   1 </red>
       <green> 1 </green>
       <blue>  1 </blue>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>sim/multiplay/generic/int[8]</factor-prop>
     </emission>
   </animation>
 
@@ -60,16 +59,8 @@
     <interpolation>
       <entry><ind>    0 </ind><dep> 0.25 </dep></entry>
       <entry><ind>   20 </ind><dep> 0.50 </dep></entry>
-      <entry><ind> 1500 </ind><dep> 5.00 </dep></entry>
+      <entry><ind> 1500 </ind><dep> 1.70 </dep></entry>
     </interpolation>
   </animation>
-<!--
-  <animation>
-    <type>select</type>
-    <object-name>Light</object-name>
-    <condition>
-      <property>controls/lighting/nav-lights</property>
-    </condition>
-  </animation>
--->
+
 </PropertyList>

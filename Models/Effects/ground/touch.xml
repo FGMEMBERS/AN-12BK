@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
-    ###################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-May2015
-    Development is ongoing, see latest version: www.github.com/HerbyW
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    
-    Firefly: 3D model improvment
-    Eagel: Liveries
-    ###################################################################################
+Copyright (C) Herbert Wagner Dec2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
 <PropertyList>
 
@@ -61,21 +55,21 @@
     <particle>
       <start>
         <color>
-          <red><value>   0.25 </value></red>
-          <green><value> 0.25 </value></green>
-          <blue><value>  0.25 </value></blue>
-          <alpha><value> 0.7 </value></alpha>
+          <red><value>   0.5 </value></red>
+          <green><value> 0.5 </value></green>
+          <blue><value>  0.5 </value></blue>
+          <alpha><value> 0.58 </value></alpha>
         </color>
-        <size><value> 1 </value></size>
+        <size><value> 3 </value></size>
       </start>
       <end>
         <color>
-          <red><value>   0.800 </value></red>
-          <green><value> 0.800 </value></green>
-          <blue><value>  0.800 </value></blue>
-          <alpha><value> 0.250 </value></alpha>
+          <red><value>   0.87 </value></red>
+          <green><value> 0.87 </value></green>
+          <blue><value>  0.87 </value></blue>
+          <alpha><value> 0.20 </value></alpha>
         </color>
-        <size><value> 2 </value></size>
+        <size><value> 11 </value></size>
       </end>
       <life-sec><value> 3 </value></life-sec>
       <mass-kg>  0.025 </mass-kg>

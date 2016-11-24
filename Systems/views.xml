@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
+<!--
+Copyright (C) Herbert Wagner Dec2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
+-->
+
 <PropertyList>
 
   <chase-distance-m type="double" archive="y"> -45 </chase-distance-m>
@@ -57,7 +62,7 @@
   <view n="103">
     <name>Exterior tail View</name>
     <type>lookfrom</type>
-    <internal archive="y">true</internal>
+    <internal archive="y">false</internal>
     <config>
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>

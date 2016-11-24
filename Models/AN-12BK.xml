@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-    #########################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Animations, FDM, Instrumentation, Rembrandt, ALS, Paratroopers, Cargo, Sounds
-    all with full Multiplayer Support.
-    Development is ongoing, see latest version: https://github.com/HerbyW?tab=repositories
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    D-Leon: technical assistance
-    Firefly: 3D model improvment
-    Eagel: Liveries
-    Michat, Joe, Miguel, 3m, D-07007 and many others: testing and giving hints for impovements
-    Instruments from; Tu-154b, Il-76D, 707
-    ##########################################################################################
+Copyright (C) Herbert Wagner Dec2014-2016
+see Read-Me.txt for all copyrights in the base folder of this aircraft
 -->
+
 <PropertyList>
 
   <path>an12-52.ac</path>
@@ -27,8 +18,8 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+      var crew_door = self.getNode("/instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("/instrumentation/doors/passenger/position-norm", 1);
     
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
@@ -227,9 +218,9 @@
   
   
   <effect>
-    <inherits-from>Aircraft/AN-12BK/Models/Effects/skin-reflect</inherits-from>
+    <inherits-from>Aircraft/AN-12BK/Models/Effects/c182sreflect-uber_body</inherits-from>
     <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
+      <not><property>/sim/rendering/rembrandt/enabled</property></not>
     </condition>
     <object-name>fuselage</object-name>
     <object-name>porte</object-name>
@@ -265,7 +256,7 @@
   <effect>
     <inherits-from>Effects/model-combined-deferred</inherits-from>
     <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/sim/rendering/rembrandt/enabled</property>
     </condition>
     <object-name>fuselage</object-name>
     <object-name>porte</object-name>
@@ -324,7 +315,7 @@
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/sim/rendering/rembrandt/enabled</property>
     </condition>
     <object-name>glass</object-name>
     <object-name>vitreporte</object-name>

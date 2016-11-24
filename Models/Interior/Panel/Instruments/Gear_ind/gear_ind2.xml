@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--
-    #########################################################################################
-    Antonov-Aircrafts and SpaceShuttle :: Herbert Wagner November2014-June2015
-    Animations, FDM, Instrumentation, Rembrandt, ALS, Paratroopers, Cargo, Sounds
-    all with full Multiplayer Support.
-    Development is ongoing, see latest version: https://github.com/HerbyW?tab=repositories
-    This file is licenced under the terms of the GNU General Public Licence V3 or later
-    D-Leon: technical assistance
-    Firefly: 3D model improvment
-    Eagel: Liveries
-    Michat, Joe, Miguel, 3m, D-07007 and many others: testing and giving hints for impovements
-    Instruments from; Tu-154b, Il-76D, 707
-    ##########################################################################################
--->
+
 
 <PropertyList>
  <path>Gear_ind2.ac</path>
@@ -40,7 +27,7 @@
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
+      <property>/sim/rendering/rembrandt/enabled</property>
     </condition>
     <object-name>disk</object-name>
   </effect>
@@ -63,7 +50,7 @@
 <animation>
   <type>rotate</type>
   <object-name>rect2</object-name>
-  <property>/gear/gear/position-norm</property>
+  <property>gear/gear/position-norm</property>
   <interpolation>
    <entry><ind>  0.0</ind><dep>    -120</dep></entry> 
    <entry><ind> 0.07</ind><dep>  -115</dep></entry>
@@ -86,7 +73,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rect1</object-name>
-  <property>/gear/gear/position-norm</property>
+  <property>gear/gear/position-norm</property>
   <interpolation>
    <entry><ind>  0.0</ind><dep>    -120</dep></entry> 
    <entry><ind> 0.07</ind><dep>  -115</dep></entry>
